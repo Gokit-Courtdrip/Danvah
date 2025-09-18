@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Test AJAX</h2>
+    <button id="testButton">Test AJAX Connection</button>
+    <div id="result" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#testButton').click(function () {
+                $('#result').html('Sending request...');
+
+                $.ajax({
+                    url: 'handle.php',
+                    type: 'POST',
+                    data: {
+                        action: 'test'
+                    },
+                    success: function (response) {
+                        $('#result').html('Success: ' + JSON.stringify(response));
+                    },
+                    error: function (xhr, status, error) {
+                        $('#result').html('Error: ' + status + ' - ' + error + '<br>Response: ' + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

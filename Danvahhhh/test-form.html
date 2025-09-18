@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Registration</title>
+</head>
+
+<body>
+    <h2>Test Registration Form</h2>
+    <form action="handle.php" method="POST">
+        <input type="hidden" name="action" value="register">
+        <div>
+            <label>Full Name:</label>
+            <input type="text" name="fullName" value="Test User">
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email" value="test@example.com">
+        </div>
+        <div>
+            <label>Phone:</label>
+            <input type="text" name="phone" value="1234567890">
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" value="password123">
+        </div>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+
+</html>

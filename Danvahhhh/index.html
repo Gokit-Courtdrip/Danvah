@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danvah Insurance - UAE's Premier Insurance Provider</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #000000;
+            /* UAE Flag Black */
+        }
+
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, #000000 0%, #222222 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #ce1126;
+            /* UAE Flag Red */
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ce1126 !important;
+            /* UAE Flag Red */
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid #ce1126;
+            /* UAE Flag Red */
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .btn-hero {
+            background: linear-gradient(45deg, #ce1126, #9e0e1e);
+            /* UAE Flag Red Gradient */
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(206, 17, 38, 0.4);
+            /* UAE Flag Red */
+            color: white;
+        }
+
+        /* Insurance Cards */
+        .insurance-section {
+            padding: 80px 0;
+            background-color: #111111;
+            position: relative;
+        }
+
+        .insurance-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        .section-title {
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        .insurance-card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insurance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: #ce1126;
+            /* UAE Flag Red */
+        }
+
+        .insurance-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ce1126;
+            /* UAE Flag Red */
+        }
+
+        .tier-selection {
+            margin: 20px 0;
+        }
+
+        .tier-btn {
+            background: #2a2a2a;
+            border: 2px solid #333;
+            color: #e0e0e0;
+            margin: 5px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .tier-btn.active {
+            background: linear-gradient(45deg, #ce1126, #9e0e1e);
+            /* UAE Flag Red Gradient */
+            border-color: #ce1126;
+            /* UAE Flag Red */
+            color: white;
+        }
+
+        .price-display {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 15px 0;
+        }
+
+        .purchase-btn {
+            background: linear-gradient(45deg, #009739, #007a2e);
+            /* UAE Flag Green Gradient */
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .purchase-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 151, 57, 0.4);
+            /* UAE Flag Green */
+            color: white;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: #0a0a0a;
+            position: relative;
+        }
+
+        .features-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: #ce1126;
+            /* UAE Flag Red */
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #ce1126;
+            /* UAE Flag Red */
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 0.9) 100%), url('https://images.unsplash.com/photo-1526495124232-a04e1849168c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #111111;
+            color: white;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+
+        .contact-info {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: #ce1126;
+            /* UAE Flag Red */
+        }
+
+        /* Footer */
+        .footer {
+            background: #000000;
+            color: white;
+            padding: 40px 0 20px;
+            border-top: 3px solid #ce1126;
+            /* UAE Flag Red */
+        }
+
+        /* Disclaimer Footer */
+        .disclaimer-footer {
+            background: linear-gradient(45deg, #ce1126, #9e0e1e);
+            /* UAE Flag Red Gradient */
+            color: white;
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 20px;
+            border: none;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #ce1126 0%, #9e0e1e 100%);
+            /* UAE Flag Red Gradient */
+            color: white;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #333;
+            padding: 12px 15px;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        .form-control:focus {
+            border-color: #ce1126;
+            /* UAE Flag Red */
+            box-shadow: 0 0 0 0.2rem rgba(206, 17, 38, 0.25);
+            /* UAE Flag Red */
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ce1126, #9e0e1e);
+            /* UAE Flag Red Gradient */
+            border: none;
+            border-radius: 10px;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+
+        .payment-option {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #2a2a2a;
+        }
+
+        .payment-option:hover {
+            border-color: #ce1126;
+            /* UAE Flag Red */
+            background: #333;
+        }
+
+        .payment-option.selected {
+            border-color: #ce1126;
+            /* UAE Flag Red */
+            background: linear-gradient(45deg, #ce1126, #9e0e1e);
+            /* UAE Flag Red Gradient */
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .insurance-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* User Info Styles */
+        .user-info {
+            color: #ffffff !important;
+            font-weight: 600;
+            background-color: #ce1126;
+            /* UAE Flag Red */
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* Alert Styles */
+        .alert {
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Password Strength */
+        .password-strength .progress {
+            height: 5px;
+            margin-bottom: 5px;
+            background-color: #333;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: #ce1126;
+            /* UAE Flag Red */
+        }
+
+        /* UAE-themed decorative elements */
+        .uae-pattern {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.05;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cGF0aCBkPSJNMjUsMUwxLDI1bDI0LDI0bDI0LTI0TDI1LDF6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+');
+            background-size: 50px 50px;
+            z-index: 0;
+        }
+
+        .section-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .uae-flag-stripe {
+            height: 3px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+            margin: 30px 0;
+        }
+
+        .btn-success {
+            background: linear-gradient(45deg, #009739, #007a2e);
+            /* UAE Flag Green Gradient */
+            border: none;
+        }
+
+        .text-primary {
+            color: #ce1126 !important;
+            /* UAE Flag Red */
+        }
+
+        .section-heading {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #ce1126, #ffffff, #009739);
+            /* UAE Flag Colors */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-shield-alt"></i> Danvah Insurance
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#insurance">Insurance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="uae-pattern" style="top: 50px; left: 50px;"></div>
+        <div class="uae-pattern" style="bottom: 50px; right: 50px;"></div>
+        <div class="container section-container">
+            <h1>Protect What Matters Most</h1>
+            <p>Comprehensive insurance solutions tailored for your peace of mind in the UAE</p>
+            <a href="#insurance" class="btn btn-hero">Explore Coverage</a>
+        </div>
+    </section>
+
+    <!-- Insurance Section -->
+    <section id="insurance" class="insurance-section">
+        <div class="uae-pattern" style="top: 100px; right: 100px;"></div>
+        <div class="container section-container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold section-heading">Choose Your Protection</h2>
+                <p class="lead">Select from our comprehensive insurance plans</p>
+            </div>
+
+            <div class="row">
+                <!-- Health Insurance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="insurance-card">
+                        <div class="insurance-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Health Insurance</h3>
+                        <p>Comprehensive medical coverage for you and your family</p>
+
+                        <div class="tier-selection">
+                            <button class="btn tier-btn active" data-tier="Basic" data-price="5000">Basic</button>
+                            <button class="btn tier-btn" data-tier="Premium" data-price="8000">Premium</button>
+                            <button class="btn tier-btn" data-tier="Platinum" data-price="12000">Platinum</button>
+                        </div>
+
+                        <div class="price-display">AED 5,000/year</div>
+
+                        <button class="btn purchase-btn" data-bs-toggle="modal" data-bs-target="#purchaseModal"
+                            data-type="Health Insurance" data-tier="Basic" data-price="5000">
+                            Purchase Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car Insurance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="insurance-card">
+                        <div class="insurance-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Car Insurance</h3>
+                        <p>Complete vehicle protection with comprehensive coverage</p>
+
+                        <div class="tier-selection">
+                            <button class="btn tier-btn active" data-tier="Third Party" data-price="1500">Third
+                                Party</button>
+                            <button class="btn tier-btn" data-tier="Comprehensive"
+                                data-price="3000">Comprehensive</button>
+                            <button class="btn tier-btn" data-tier="Premium" data-price="4500">Premium</button>
+                        </div>
+
+                        <div class="price-display">AED 1,500/year</div>
+
+                        <button class="btn purchase-btn" data-bs-toggle="modal" data-bs-target="#purchaseModal"
+                            data-type="Car Insurance" data-tier="Third Party" data-price="1500">
+                            Purchase Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Home Insurance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="insurance-card">
+                        <div class="insurance-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Insurance</h3>
+                        <p>Protect your home and belongings from unexpected events</p>
+
+                        <div class="tier-selection">
+                            <button class="btn tier-btn active" data-tier="Basic" data-price="2000">Basic</button>
+                            <button class="btn tier-btn" data-tier="Standard" data-price="3500">Standard</button>
+                            <button class="btn tier-btn" data-tier="Premium" data-price="5000">Premium</button>
+                        </div>
+
+                        <div class="price-display">AED 2,000/year</div>
+
+                        <button class="btn purchase-btn" data-bs-toggle="modal" data-bs-target="#purchaseModal"
+                            data-type="Home Insurance" data-tier="Basic" data-price="2000">
+                            Purchase Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Travel Insurance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="insurance-card">
+                        <div class="insurance-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Travel Insurance</h3>
+                        <p>Stay protected during your domestic and international travels</p>
+
+                        <div class="tier-selection">
+                            <button class="btn tier-btn active" data-tier="Domestic" data-price="300">Domestic</button>
+                            <button class="btn tier-btn" data-tier="International"
+                                data-price="800">International</button>
+                            <button class="btn tier-btn" data-tier="Premium" data-price="1200">Premium</button>
+                        </div>
+
+                        <div class="price-display">AED 300/year</div>
+
+                        <button class="btn purchase-btn" data-bs-toggle="modal" data-bs-target="#purchaseModal"
+                            data-type="Travel Insurance" data-tier="Domestic" data-price="300">
+                            Purchase Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Life Insurance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="insurance-card">
+                        <div class="insurance-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Life Insurance</h3>
+                        <p>Secure your family's financial future with life coverage</p>
+
+                        <div class="tier-selection">
+                            <button class="btn tier-btn active" data-tier="Term Life" data-price="2500">Term
+                                Life</button>
+                            <button class="btn tier-btn" data-tier="Whole Life" data-price="6000">Whole Life</button>
+                            <button class="btn tier-btn" data-tier="Universal" data-price="8500">Universal</button>
+                        </div>
+
+                        <div class="price-display">AED 2,500/year</div>
+
+                        <button class="btn purchase-btn" data-bs-toggle="modal" data-bs-target="#purchaseModal"
+                            data-type="Life Insurance" data-tier="Term Life" data-price="2500">
+                            Purchase Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business Insurance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="insurance-card">
+                        <div class="insurance-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Business Insurance</h3>
+                        <p>Comprehensive protection for your business operations</p>
+
+                        <div class="tier-selection">
+                            <button class="btn tier-btn active" data-tier="Startup" data-price="4000">Startup</button>
+                            <button class="btn tier-btn" data-tier="Standard" data-price="8000">Standard</button>
+                            <button class="btn tier-btn" data-tier="Enterprise" data-price="15000">Enterprise</button>
+                        </div>
+
+                        <div class="price-display">AED 4,000/year</div>
+
+                        <button class="btn purchase-btn" data-bs-toggle="modal" data-bs-target="#purchaseModal"
+                            data-type="Business Insurance" data-tier="Startup" data-price="4000">
+                            Purchase Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="uae-pattern" style="bottom: 100px; left: 100px;"></div>
+        <div class="container section-container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold section-heading">Why Choose Danvah Insurance?</h2>
+                <p class="lead">Experience the difference with our premium services</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock customer service for all your insurance needs</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Quick Claims</h4>
+                        <p>Fast and hassle-free claim processing within 24 hours</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Trusted Service</h4>
+                        <p>Over 10 years of excellence in insurance services</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile App</h4>
+                        <p>Manage your policies on-the-go with our mobile application</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h4>Best Rates</h4>
+                        <p>Competitive pricing with maximum coverage benefits</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Expert Team</h4>
+                        <p>Professional insurance advisors to guide your decisions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="uae-pattern" style="top: 150px; right: 150px;"></div>
+        <div class="container section-container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-4 fw-bold mb-4">About Danvah Insurance</h2>
+                    <p class="lead mb-4">
+                        With over a decade of experience in the insurance industry, Danvah Insurance has been
+                        protecting families and businesses across the UAE.
+                    </p>
+                    <p class="mb-4">
+                        We believe in providing comprehensive coverage that gives you peace of mind. Our team
+                        of experienced professionals works tirelessly to ensure that you get the best protection
+                        at competitive rates throughout the Emirates.
+                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="fw-bold">50,000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="fw-bold">99.5%</h3>
+                            <p>Claim Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Dubai Skyline" class="img-fluid rounded shadow-lg" style="border: 3px solid #ce1126;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="uae-pattern" style="bottom: 50px; left: 50px;"></div>
+        <div class="container section-container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold section-heading">Get In Touch</h2>
+                <p class="lead">We're here to help you with all your insurance needs</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info text-center">
+                        <i class="fas fa-phone fa-3x mb-3" style="color: #ce1126;"></i>
+                        <h4>Call Us</h4>
+                        <p>+971 4 123 4567<br>+971 50 123 4567</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info text-center">
+                        <i class="fas fa-envelope fa-3x mb-3" style="color: #ce1126;"></i>
+                        <h4>Email Us</h4>
+                        <p>info@danvahinsurance.ae<br>support@danvahinsurance.ae</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info text-center">
+                        <i class="fas fa-map-marker-alt fa-3x mb-3" style="color: #ce1126;"></i>
+                        <h4>Visit Us</h4>
+                        <p>Sheikh Zayed Road<br>Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-shield-alt" style="color: #ce1126;"></i> Danvah Insurance</h5>
+                    <p>Protecting what matters most to you with comprehensive insurance solutions across the UAE.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-light">Home</a></li>
+                        <li><a href="#insurance" class="text-light">Insurance</a></li>
+                        <li><a href="#features" class="text-light">Features</a></li>
+                        <li><a href="#about" class="text-light">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/4rshia_mv" target="_blank" title="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/arshia-movahed" target="_blank" title="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.freelancer.com/u/ArshiaMv" target="_blank" title="Freelancer"><i
+                                class="fas fa-laptop-code"></i></a>
+                        <a href="https://wa.me/971503500109" target="_blank" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/Gokit-Courtdrip" target="_blank" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disclaimer-footer mb-3">
+                <i class="fas fa-info-circle me-2"></i> This is only a test project and not a real service providing
+                website.
+            </div>
+
+            <div class="uae-flag-stripe my-4"></div>
+            <div class="text-center">
+                <p>© 2024 Danvah Insurance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to Your Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="loginEmail" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create New Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" name="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="registerEmail" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="registerPhone" name="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" name="password" required>
+                            <small class="form-text text-muted">
+                                Password must be at least 8 characters long and include uppercase, lowercase, numbers,
+                                and special characters.
+                            </small>
+                            <div class="password-strength mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <small class="text-muted">Password strength: <span id="password-strength-text">Very
+                                        weak</span></small>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Modal -->
+    <div class="modal fade" id="purchaseModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Complete Your Purchase</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6>Selected Plan:</h6>
+                            <p id="selectedPlan" class="fw-bold"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Total Amount:</h6>
+                            <p id="selectedPrice" class="fw-bold text-success"></p>
+                        </div>
+                    </div>
+
+                    <form id="purchaseForm">
+                        <input type="hidden" id="hiddenInsuranceType" name="insuranceType">
+                        <input type="hidden" id="hiddenTier" name="tier">
+                        <input type="hidden" id="hiddenPrice" name="price">
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="purchaseFullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="purchaseFullName" name="fullName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="purchaseEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="purchaseEmail" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="purchasePhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="purchasePhone" name="phone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="purchaseAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="purchaseAddress" name="address" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6>Payment Method</h6>
+                            <div class="payment-option" data-method="credit-card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-credit-card fa-2x me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Credit/Debit Card</h6>
+                                        <small class="text-muted">Visa, Mastercard, American Express</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-option" data-method="bank-transfer">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-university fa-2x me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Bank Transfer</h6>
+                                        <small class="text-muted">Direct bank transfer</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-option" data-method="digital-wallet">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-wallet fa-2x me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Digital Wallet</h6>
+                                        <small class="text-muted">PayPal, Apple Pay, Google Pay</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cardDetails" class="mb-3" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="cardNumber" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="cardNumber" name="cardNumber"
+                                        placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                                    <input type="text" class="form-control" id="expiryDate" name="expiryDate"
+                                        placeholder="MM/YY">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#"
+                                    class="text-primary">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100 btn-lg">
+                            <i class="fas fa-lock me-2"></i>Complete Purchase
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Mock API for Netlify -->
+    <script>
+        // Mock API for Netlify (since PHP won't work there)
+        class MockAPI {
+            constructor() {
+                // In-memory database
+                this.users = [
+                    {
+                        id: 1,
+                        full_name: "Test User",
+                        email: "test@example.com",
+                        phone: "1234567890",
+                        password: "Password123!" // For demo purposes
+                    }
+                ];
+                this.policies = [];
+                this.policyDetails = [];
+                this.nextUserId = 2;
+                this.nextPolicyId = 1;
+            }
+
+            handleRequest(action, data) {
+                console.log(`Handling ${action} request with data:`, data);
+
+                switch (action) {
+                    case 'login':
+                        return this.login(data);
+                    case 'register':
+                        return this.register(data);
+                    case 'purchase':
+                        return this.purchase(data);
+                    case 'test':
+                        return { success: true, message: 'AJAX connection successful' };
+                    default:
+                        return { success: false, message: 'Invalid action: ' + action };
+                }
+            }
+
+            login(data) {
+                const { email, password } = data;
+
+                if (!email || !password) {
+                    return { success: false, message: 'Email and password are required' };
+                }
+
+                const user = this.users.find(u => u.email === email && u.password === password);
+
+                if (user) {
+                    return {
+                        success: true,
+                        message: 'Login successful',
+                        user: user.full_name,
+                        user_id: user.id
+                    };
+                } else {
+                    return { success: false, message: 'Invalid email or password' };
+                }
+            }
+
+            register(data) {
+                const { fullName, email, phone, password } = data;
+
+                if (!fullName || !email || !phone || !password) {
+                    return { success: false, message: 'All fields are required' };
+                }
+
+                // Password validation
+                if (password.length < 8) {
+                    return { success: false, message: 'Password must be at least 8 characters long' };
+                }
+
+                // Check for password complexity
+                const hasUpperCase = /[A-Z]/.test(password);
+                const hasLowerCase = /[a-z]/.test(password);
+                const hasNumbers = /\d/.test(password);
+                const hasSpecialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+
+                if (!(hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars)) {
+                    return { success: false, message: 'Password must contain uppercase, lowercase, numbers, and special characters' };
+                }
+
+                // Check if email already exists
+                if (this.users.some(u => u.email === email)) {
+                    return { success: false, message: 'Email already registered' };
+                }
+
+                // Add new user
+                const newUser = {
+                    id: this.nextUserId++,
+                    full_name: fullName,
+                    email: email,
+                    phone: phone,
+                    password: password
+                };
+
+                this.users.push(newUser);
+                console.log("User registered:", newUser);
+
+                return { success: true, message: 'Registration successful' };
+            }
+
+            purchase(data) {
+                const { insuranceType, tier, price, fullName, email, phone, address, paymentMethod } = data;
+
+                if (!insuranceType || !tier || !price || !fullName || !email) {
+                    return { success: false, message: 'Required fields are missing' };
+                }
+
+                // Generate policy number
+                const policyNumber = 'DI' + new Date().getFullYear() +
+                    String(Math.floor(Math.random() * 99999)).padStart(5, '0');
+
+                // Check if user exists, if not create them
+                let userId;
+                const existingUser = this.users.find(u => u.email === email);
+
+                if (!existingUser) {
+                    // Create new user
+                    const newUser = {
+                        id: this.nextUserId++,
+                        full_name: fullName,
+                        email: email,
+                        phone: phone,
+                        password: 'defaultpass'
+                    };
+
+                    this.users.push(newUser);
+                    userId = newUser.id;
+                } else {
+                    userId = existingUser.id;
+                }
+
+                // Create policy
+                const startDate = new Date().toISOString().split('T')[0];
+                const endDate = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+                    .toISOString().split('T')[0];
+
+                const policy = {
+                    id: this.nextPolicyId++,
+                    user_id: userId,
+                    policy_number: policyNumber,
+                    insurance_type: insuranceType,
+                    insurance_tier: tier,
+                    price: price,
+                    status: 'active',
+                    start_date: startDate,
+                    end_date: endDate,
+                    created_at: new Date().toISOString()
+                };
+
+                this.policies.push(policy);
+
+                // Add policy details
+                const details = [
+                    { policy_id: policy.id, field_name: 'customer_address', field_value: address },
+                    { policy_id: policy.id, field_name: 'payment_method', field_value: paymentMethod },
+                    { policy_id: policy.id, field_name: 'purchase_date', field_value: new Date().toISOString() }
+                ];
+
+                this.policyDetails.push(...details);
+                console.log("Policy created:", policy);
+
+                return {
+                    success: true,
+                    message: 'Purchase successful',
+                    policyNumber: policyNumber
+                };
+            }
+        }
+
+        // Create a global instance
+        const mockAPI = new MockAPI();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Tier selection functionality
+            $('.tier-btn').click(function () {
+                const card = $(this).closest('.insurance-card');
+                const tier = $(this).data('tier');
+                const price = $(this).data('price');
+
+                // Update active state
+                card.find('.tier-btn').removeClass('active');
+                $(this).addClass('active');
+
+                // Update price display
+                card.find('.price-display').text('AED ' + price.toLocaleString() + '/year');
+
+                // Update purchase button data
+                const purchaseBtn = card.find('.purchase-btn');
+                purchaseBtn.attr('data-tier', tier);
+                purchaseBtn.attr('data-price', price);
+            });
+
+            // Purchase modal setup
+            $('.purchase-btn').click(function () {
+                const type = $(this).data('type');
+                const tier = $(this).data('tier');
+                const price = $(this).data('price');
+
+                $('#selectedPlan').text(type + ' - ' + tier);
+                $('#selectedPrice').text('AED ' + price.toLocaleString() + '/year');
+
+                $('#hiddenInsuranceType').val(type);
+                $('#hiddenTier').val(tier);
+                $('#hiddenPrice').val(price);
+            });
+
+            // Payment method selection
+            $('.payment-option').click(function () {
+                $('.payment-option').removeClass('selected');
+                $(this).addClass('selected');
+
+                const method = $(this).data('method');
+                if (method === 'credit-card') {
+                    $('#cardDetails').show();
+                } else {
+                    $('#cardDetails').hide();
+                }
+            });
+
+            // Password strength checker
+            $('#registerPassword').on('input', function () {
+                const password = $(this).val();
+                let strength = 0;
+                let strengthText = '';
+                let progressColor = '';
+
+                // Length check
+                if (password.length >= 8) {
+                    strength += 25;
+                }
+
+                // Complexity checks
+                if (/[A-Z]/.test(password)) strength += 15;
+                if (/[a-z]/.test(password)) strength += 15;
+                if (/\d/.test(password)) strength += 15;
+                if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) strength += 30;
+
+                // Set strength text and color
+                if (strength < 30) {
+                    strengthText = 'Very weak';
+                    progressColor = '#dc3545'; // red
+                } else if (strength < 60) {
+                    strengthText = 'Weak';
+                    progressColor = '#ffc107'; // yellow
+                } else if (strength < 80) {
+                    strengthText = 'Medium';
+                    progressColor = '#fd7e14'; // orange
+                } else {
+                    strengthText = 'Strong';
+                    progressColor = '#28a745'; // green
+                }
+
+                // Update UI
+                $('#password-strength-text').text(strengthText);
+                $('.password-strength .progress-bar')
+                    .css('width', strength + '%')
+                    .css('background-color', progressColor)
+                    .attr('aria-valuenow', strength);
+            });
+
+            // Login form submission
+            $('#loginForm').on('submit', function (e) {
+                e.preventDefault();
+
+                const email = $('#loginEmail').val();
+                const password = $('#loginPassword').val();
+
+                if (!email || !password) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                // Use the mock API instead of AJAX for Netlify
+                const response = mockAPI.handleRequest('login', { email, password });
+
+                if (response.success) {
+                    $('#loginModal').modal('hide');
+                    alert('Welcome back, ' + response.user + '!');
+                    updateNavigation(response.user);
+                    $('#loginForm')[0].reset();
+                } else {
+                    alert(response.message);
+                }
+            });
+
+            // Register form submission
+            $('#registerForm').on('submit', function (e) {
+                e.preventDefault();
+
+                const fullName = $('#registerName').val();
+                const email = $('#registerEmail').val();
+                const phone = $('#registerPhone').val();
+                const password = $('#registerPassword').val();
+                const confirmPassword = $('#confirmPassword').val();
+
+                if (!fullName || !email || !phone || !password || !confirmPassword) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match');
+                    return;
+                }
+
+                // Password validation
+                if (password.length < 8) {
+                    alert('Password must be at least 8 characters long');
+                    return;
+                }
+
+                // Check for password complexity
+                const hasUpperCase = /[A-Z]/.test(password);
+                const hasLowerCase = /[a-z]/.test(password);
+                const hasNumbers = /\d/.test(password);
+                const hasSpecialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+
+                if (!(hasUpperCase && hasLowerCase && hasNumbers)) {
+                    alert('Password must contain at least one uppercase letter, one lowercase letter, and one number');
+                    return;
+                }
+
+                if (!hasSpecialChars) {
+                    alert('Password must contain at least one special character (e.g., !@#$%^&*)');
+                    return;
+                }
+
+                // Use the mock API instead of AJAX for Netlify
+                const response = mockAPI.handleRequest('register', {
+                    fullName,
+                    email,
+                    phone,
+                    password
+                });
+
+                if (response.success) {
+                    $('#registerModal').modal('hide');
+                    alert('Registration successful! You can now login.');
+                    $('#registerForm')[0].reset();
+                    setTimeout(function () {
+                        $('#loginModal').modal('show');
+                    }, 500);
+                } else {
+                    alert(response.message);
+                }
+            });
+
+            // Purchase form submission
+            $('#purchaseForm').on('submit', function (e) {
+                e.preventDefault();
+
+                const formData = {
+                    insuranceType: $('#hiddenInsuranceType').val(),
+                    tier: $('#hiddenTier').val(),
+                    price: $('#hiddenPrice').val(),
+                    fullName: $('#purchaseFullName').val(),
+                    email: $('#purchaseEmail').val(),
+                    phone: $('#purchasePhone').val(),
+                    address: $('#purchaseAddress').val(),
+                    paymentMethod: $('.payment-option.selected').data('method') || 'credit-card'
+                };
+
+                // Validate required fields
+                if (!formData.fullName || !formData.email || !formData.phone || !formData.address) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+
+                // Validate payment method selection
+                if (!$('.payment-option.selected').length) {
+                    alert('Please select a payment method');
+                    return;
+                }
+
+                // If credit card is selected, validate card details
+                if ($('.payment-option.selected').data('method') === 'credit-card') {
+                    const cardNumber = $('#cardNumber').val();
+                    const expiryDate = $('#expiryDate').val();
+                    const cvv = $('#cvv').val();
+
+                    if (!cardNumber || !expiryDate || !cvv) {
+                        alert('Please fill in all card details');
+                        return;
+                    }
+
+                    formData.cardNumber = cardNumber;
+                    formData.expiryDate = expiryDate;
+                    formData.cvv = cvv;
+                }
+
+                // Use the mock API instead of AJAX for Netlify
+                const response = mockAPI.handleRequest('purchase', formData);
+
+                if (response.success) {
+                    $('#purchaseModal').modal('hide');
+                    alert('Purchase successful! Policy Number: ' + response.policyNumber + '\nYou will receive confirmation via email.');
+                    $('#purchaseForm')[0].reset();
+                    $('.payment-option').removeClass('selected');
+                    $('#cardDetails').hide();
+                } else {
+                    alert(response.message);
+                }
+            });
+
+            // Update navigation when user logs in
+            function updateNavigation(userName) {
+                const navItems = $('.navbar-nav');
+                navItems.find('a[data-bs-target="#loginModal"]').parent().hide();
+                navItems.find('a[data-bs-target="#registerModal"]').parent().hide();
+
+                // Add user info and logout
+                navItems.append(`
+                    <li class="nav-item">
+                        <span class="nav-link user-info">Welcome, ${userName}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutLink">Logout</a>
+                    </li>
+                `);
+
+                // Add logout functionality
+                $('#logoutLink').on('click', function (e) {
+                    e.preventDefault();
+                    if (confirm('Are you sure you want to logout?')) {
+                        location.reload();
+                    }
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            $('a[href^="#"]').on('click', function (event) {
+                const href = $(this).attr('href');
+
+                // Skip if href is just "#" or empty
+                if (href === "#" || !href) return;
+
+                const target = $(href);
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 70
+                    }, 1000);
+                }
+            });
+
+            // Card number formatting
+            $('#cardNumber').on('input', function () {
+                let value = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                let formattedValue = '';
+
+                // Format with spaces every 4 digits
+                for (let i = 0; i < value.length; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        formattedValue += ' ';
+                    }
+                    formattedValue += value[i];
+                }
+
+                $(this).val(formattedValue);
+            });
+
+            // Expiry date formatting
+            $('#expiryDate').on('input', function () {
+                let value = $(this).val().replace(/\D/g, '');
+                let formattedValue = '';
+
+                if (value.length > 0) {
+                    // Format as MM
+                    formattedValue = value.substring(0, 2);
+
+                    // Add slash and YY if we have more digits
+                    if (value.length > 2) {
+                        formattedValue += '/' + value.substring(2, 4);
+                    }
+                }
+
+                $(this).val(formattedValue);
+            });
+
+            // CVV validation
+            $('#cvv').on('input', function () {
+                let value = $(this).val().replace(/\D/g, '');
+                $(this).val(value.substring(0, 3));
+            });
+
+            // Animation on scroll
+            $(window).scroll(function () {
+                $('.insurance-card, .feature-item').each(function () {
+                    const elementTop = $(this).offset().top;
+                    const elementBottom = elementTop + $(this).outerHeight();
+                    const viewportTop = $(window).scrollTop();
+                    const viewportBottom = viewportTop + $(window).height();
+
+                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                        $(this).addClass('fade-in');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
